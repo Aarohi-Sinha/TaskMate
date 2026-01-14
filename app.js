@@ -32,7 +32,7 @@ function saveTasks() {
 }
 
 function uid() {
-    return Date.now.toString(36) + Math.random.toString(36).slice(2, 8);
+    return Date.now().toString(36) + Math.random.toString(36).slice(2, 8);
 }
 
 function fmtDateISO(d) {
@@ -50,7 +50,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = titleIn.value.trim();
     const notes = notesIn.value.trim();
-    const due = dueIn.value ? new Date(dueIn.value + "T00:00;00").toISOString() : null;
+    const due = dueIn.value ? new Date(dueIn.value + "T00:00:00").toISOString() : null;
     const priority = priorityIn.value;
     const editing = editingId.value;
 
@@ -335,6 +335,4 @@ window._taskmate = {
     },
     saveTasks,
     loadTasks,
-
 }
-
