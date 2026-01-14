@@ -18,7 +18,7 @@ let tasks = loadTasks();
 function loadTasks() {
     try {
         const raw = localStorage.getItem(LS_KEY);
-        return raw ? JSON.parse(row) : [];
+        return raw ? JSON.parse(raw) : [];
     }
     catch (e) {
         console.error("load error", e);
@@ -335,4 +335,5 @@ window._taskmate = {
     },
     saveTasks,
     loadTasks,
+
 }
