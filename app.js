@@ -46,7 +46,7 @@ function fmtDateISO(d) {
     }
 }
 
-form.addEventListener("Submit", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = titleIn.value.trim();
     const notes = notesIn.value.trim();
@@ -337,3 +337,4 @@ window._taskmate = {
     loadTasks,
 
 }
+
